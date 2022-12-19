@@ -1,0 +1,279 @@
+/*----------------------------------
+    GENERAL STYLING
+------------------------------------*/
+/* Body */
+body {
+    margin: 0%;
+}
+
+/* Heading 1 Elements */
+h1 {
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin-top: 3%;
+    color: gold;
+}
+
+/* Heading 1 Element Hover Effect */
+h1:hover {
+    filter: grayscale(10%);
+    transform: scale(1.8);
+    transition: transform 2s;
+}
+
+/* Styling for Portfolio Title */
+.white-text {
+    color:chartreuse
+}
+
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+p:hover {
+    transition: transform 2s;
+    transform: scale(1.5s);
+}
+
+.center {
+    text-align: center;
+}
+
+.center:hover {
+    transition: transform 2s;
+    transform: scale(1.2)
+}
+
+a {
+    color: blue;
+}
+
+q {
+    font-style: italic;
+    color: whitesmoke;
+}
+
+img {
+    filter: grayscale(25%);
+    border-radius: 8px;
+    margin: 15%;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Image Elements and Hover Effects */
+img:hover {
+    filter: grayscale(5%);
+    transition: transform 1.5s;
+    transform: scale(1.8);
+}
+
+/* On screens 576px or smaller, the images will be 100px tall and centered vertically in the column. */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    padding: 2%;
+    background-color: whitesmoke;
+}
+/*---------------------------------------------
+    END OF GENERAL STYLING
+-----------------------------------------------*/
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -w-webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+}
+
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: whitesmoke;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s;
+}
+
+/* moveNavText animation effect for moving the navbar text from above the view to the navbar. */
+@keyframes moveNavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/* Screens 576px or smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .navbar a {
+        width: 25%;
+        font-size: 12px;
+    }
+}
+
+/* Navbar Hover Effects */
+.navbar a:hover {
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+}
+
+/* Navbar Home Button */
+.navbar a.active {
+    background-color: gold;
+}
+/*------------------------------------
+    END OF NAVBAR STYLING
+--------------------------------------*/
+/*------------------------------------
+    VIDEO STYLING
+--------------------------------------*/
+#Video_3 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Screens that are 576px and smaller will not display the background video */
+@media screen and (max-width: 576px) {
+    #Video_3 {
+        display: none;
+    }
+}
+
+/* Texts over the video */
+.video-text {
+    background: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+/* This animation causes the overlay video text to move up from the bottom of the page upon page load */
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+/*--------------------------------------
+    END VIDEO STYLING
+----------------------------------------*/
+/*--------------------------------------
+    TABLE STYLING
+----------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+.column_1 {
+    float: left;
+    width: 50%;
+    padding: 0%;
+    padding-top: 3%;
+    height: 500px;
+    background-color: #f2f2f2;
+}
+/* Screens 576px or smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 576px) {
+    .column_1 {
+        overflow: auto;
+    }
+}
+
+.column_2 {
+    float: left;
+    width: 50%;
+    padding: 10%;
+    padding-top: 10%;
+    height: 500px;
+    background-color: #210259;
+}
+/* This is applied to the columns in the final row overriding the padding and height to provide more room for the contact form while keeping the rest of the contact form for column_1 or column_2 */
+.column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*-----------------------------------------
+    END OF TABLE STYLING
+-------------------------------------------*/
+/*-----------------------------------------
+    CONTACT FORM STYLING
+-------------------------------------------*/
+input[type=text] {
+    width: 450px;
+    padding: 5px;
+    border: 5px solid rgb(196, 194, 194);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    resize: vertical;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+input[type=text]:hover {
+    box-shadow: 0 0 5px #00004d inset;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+input[type=submit]:hover {
+    background-color: whitesmoke;
+    color: black;
+    transition: transform 1s;
+    transform: scale(1.5s)
+}
+
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10%;
+    font-family: "Trebuchet MS", Optima;
+}
